@@ -1,0 +1,1 @@
+Settings->Time&date -> Language -> Spelling, typing & keyboard settings -> Advanced Keyboard Settings -> Let me use a different input method for each app window
