@@ -8,6 +8,7 @@ reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE /va /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 00000000 /f
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome /v RestoreOnStartup /t REG_DWORD /d 00000001 /f
 NetSh Advfirewall set allprofiles state on
+powershell -Command "& {Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force}"
 powershell -Command "Invoke-WebRequest "https://raw.github.com/scorchefix/TryAgain/master/clearcache.ps1" -OutFile "%USERPROFILE%\Desktop\cache.ps1""
 cd %USERPROFILE%\Desktop
 powershell -file "cache.ps1"
